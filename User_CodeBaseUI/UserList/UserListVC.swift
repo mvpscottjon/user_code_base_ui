@@ -69,7 +69,7 @@ extension UserListVC{
         })
        _ =  self.tbView.reactive.selectedRowIndexPath.observeNext(with: { [weak self] idx in
             
-            print("點囉",idx)
+//            print("點囉",idx)
             
           let user = self?.vm.users[idx.row]
            
