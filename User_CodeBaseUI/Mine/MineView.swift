@@ -31,7 +31,7 @@ class MineView: UIView {
     
     
     var btnFollow = BtnDetail()
-    var btnEmail = BtnDetail()
+    var btnEmail = BtnDetail(frame: .zero)
     
     
     let coverColor = UIColor.init(red: 0.02263874933, green: 0.1448459029, blue: 0.2967996299, alpha: 1)
@@ -170,7 +170,7 @@ extension MineView{
         lbLogin.textColor = .lightGray
         self.addSubview(lbLogin)
         lbLogin.snp.makeConstraints({
-            $0.top.equalTo(lbFullName.snp.bottom).offset(10)
+            $0.top.equalTo(lbFullName.snp.bottom).offset(5)
             $0.leading.equalTo(lbFullName)
             $0.trailing.equalToSuperview().offset(-60)
             
@@ -202,16 +202,16 @@ extension MineView{
         btnEmail.imageView?.contentMode = .scaleAspectFit
         btnEmail.setImage(UIImage(systemName: "envelope")?.withRenderingMode(.alwaysTemplate), for: .normal)
         btnEmail.setTitle("", for: .normal)
-        btnEmail.setTitleColor(.lightGray, for: .normal)
+        btnEmail.setTitleColor(.black, for: .normal)
         btnEmail.tintColor = .black
-        
+        btnEmail.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         
 //        btnEmail.backgroundColor = .yellow
         
         self.addSubview(btnEmail)
         btnEmail.snp.makeConstraints({
             $0.top.equalTo(btnFollow.snp.bottom).offset(20)
-            $0.leading.equalTo(lbFullName)
+            $0.leading.equalTo(btnFollow)
 //            $0.trailing.equalToSuperview().offset(-60)
             
             
@@ -237,8 +237,10 @@ extension MineView{
         self.lbLogin.text = subVM?.login
         
         self.btnFollow.setAttributedTitle(subVM?.followAttrString, for: .normal)
-        self.btnFollow.sizeToFit()
-//        self.btnEmail.setTitle(subVM?.email ?? "", for: .normal)
+        
+//        print("看一下email:",subVM?.email)
+        
+        self.btnEmail.setTitle(subVM?.email ?? "", for: .normal)
         
     }
     

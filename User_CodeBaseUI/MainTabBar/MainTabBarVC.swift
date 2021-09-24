@@ -48,7 +48,7 @@ extension MainTabBarVC{
         
         _ = self.view.reactive.swipeGesture(numberOfTouches: 1, direction: .left).observeNext(with: { [weak self] _ in
             
-            print("偵測到往左")
+//            print("偵測到往左")
             
             if self?.selectedIndex == 0{
                 
@@ -59,7 +59,7 @@ extension MainTabBarVC{
         
         _ = self.view.reactive.swipeGesture(numberOfTouches: 1, direction: .right).observeNext(with: { [weak self] _ in
             
-            print("偵測到往右")
+//            print("偵測到往右")
             
             if self?.selectedIndex == 1{
                 

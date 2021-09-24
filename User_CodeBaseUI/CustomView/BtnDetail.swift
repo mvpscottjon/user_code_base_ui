@@ -21,13 +21,13 @@ class BtnDetail: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override var intrinsicContentSize: CGSize {
-        let imageViewWidth = imageView?.frame.width ?? 0.0
-        let labelSize = titleLabel?.sizeThatFits(CGSize(width: frame.width, height: .greatestFiniteMagnitude)) ?? .zero
-        let desiredButtonSize = CGSize(width: labelSize.width + titleEdgeInsets.left + titleEdgeInsets.right + imageViewWidth, height: labelSize.height + titleEdgeInsets.top + titleEdgeInsets.bottom)
-        
-        return desiredButtonSize
-    }
+//    override var intrinsicContentSize: CGSize {
+//        let imageViewWidth = imageView?.frame.width ?? 0.0
+//        let labelSize = titleLabel?.sizeThatFits(CGSize(width: frame.width, height: .greatestFiniteMagnitude)) ?? .zero
+//        let desiredButtonSize = CGSize(width: labelSize.width + titleEdgeInsets.left + titleEdgeInsets.right + imageViewWidth, height: labelSize.height + titleEdgeInsets.top + titleEdgeInsets.bottom)
+//        
+//        return desiredButtonSize
+//    }
     
     
 }
@@ -37,11 +37,12 @@ extension BtnDetail {
     
     private func setupView(){
         
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 25)
 //        self.backgroundColor = .red
         self.titleLabel?.adjustsFontSizeToFitWidth = true
         self.titleLabel?.lineBreakMode = .byWordWrapping
         self.titleLabel?.numberOfLines = 1
-        self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+        self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 5)
         
     }
     

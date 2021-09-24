@@ -50,13 +50,13 @@ class UserDetailSubVM:NSObject{
     
     var followAttrString: NSAttributedString?{
         
-        let countAttr = [NSAttributedString.Key.foregroundColor:UIColor.black, NSAttributedString.Key.font:UIFont.systemFont(ofSize: 14)]
+        let countAttr = [NSAttributedString.Key.foregroundColor:UIColor.black, NSAttributedString.Key.font:UIFont.systemFont(ofSize: 15)]
         
-        let strAttr = [NSAttributedString.Key.foregroundColor:UIColor.lightGray, NSAttributedString.Key.font:UIFont.systemFont(ofSize: 13)]
+        let strAttr = [NSAttributedString.Key.foregroundColor:UIColor.lightGray, NSAttributedString.Key.font:UIFont.systemFont(ofSize: 14)]
 
         
         
-        var finalAttrString = NSMutableAttributedString()
+        let finalAttrString = NSMutableAttributedString()
         
         
         let followerCount = "\(self._user?.followers ?? 0)"
