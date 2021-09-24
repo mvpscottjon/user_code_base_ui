@@ -37,12 +37,13 @@ extension BtnDetail {
     
     private func setupView(){
         
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 25)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 20)
 //        self.backgroundColor = .red
-        self.titleLabel?.adjustsFontSizeToFitWidth = true
+        self.contentHorizontalAlignment = .leading
+        self.titleLabel?.adjustsFontSizeToFitWidth = false
         self.titleLabel?.lineBreakMode = .byWordWrapping
-        self.titleLabel?.numberOfLines = 1
-        self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 5)
+//        self.titleLabel?.numberOfLines = 1
+        self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
         
     }
     

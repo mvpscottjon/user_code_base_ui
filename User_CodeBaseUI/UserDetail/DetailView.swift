@@ -115,7 +115,7 @@ extension DetailView{
         })
         
         
-        btnLogin.titleLabel?.font = UIFont.systemFont(ofSize: 25)
+        
         btnLogin.setTitle("Name", for: .normal)
         btnLogin.setImage(UIImage(systemName: "person.fill")?.withRenderingMode(.alwaysTemplate).withTintColor(.black), for: .normal)
         btnLogin.setTitleColor(.lightGray, for: .normal)
@@ -127,8 +127,9 @@ extension DetailView{
         btnLogin.snp.makeConstraints({
             $0.top.equalTo(border.snp.bottom).offset(40)
             $0.leading.equalToSuperview().offset(70)
-            $0.trailing.lessThanOrEqualToSuperview()
-//            $0.width.lessThanOrEqualTo(self).inset(70)
+//            $0.trailing.lessThanOrEqualToSuperview()
+            
+            $0.trailing.equalToSuperview().inset(10)
             
         })
         
@@ -145,7 +146,9 @@ extension DetailView{
             $0.top.equalTo(btnLogin.snp.bottom).offset(40)
             $0.leading.equalTo(btnLogin)
 //            $0.width.lessThanOrEqualTo(self).inset(70)
-            $0.trailing.lessThanOrEqualToSuperview()
+//            $0.trailing.lessThanOrEqualToSuperview()
+
+            $0.trailing.equalToSuperview().inset(10)
 
         })
         
@@ -163,7 +166,9 @@ extension DetailView{
             $0.top.equalTo(btnLocation.snp.bottom).offset(40)
             $0.leading.equalTo(btnLogin)
 //            $0.width.lessThanOrEqualTo(self).inset(70)
-            $0.trailing.lessThanOrEqualToSuperview()
+//            $0.trailing.lessThanOrEqualToSuperview()
+
+            $0.trailing.equalToSuperview().inset(10)
 
         })
         
