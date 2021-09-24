@@ -23,10 +23,10 @@ class BtnDetail: UIButton {
     
     override var intrinsicContentSize: CGSize {
         let imageViewWidth = imageView?.frame.width ?? 0.0
-               let labelSize = titleLabel?.sizeThatFits(CGSize(width: frame.width, height: .greatestFiniteMagnitude)) ?? .zero
-               let desiredButtonSize = CGSize(width: labelSize.width + titleEdgeInsets.left + titleEdgeInsets.right + imageViewWidth, height: labelSize.height + titleEdgeInsets.top + titleEdgeInsets.bottom)
-
-               return desiredButtonSize
+        let labelSize = titleLabel?.sizeThatFits(CGSize(width: frame.width, height: .greatestFiniteMagnitude)) ?? .zero
+        let desiredButtonSize = CGSize(width: labelSize.width + titleEdgeInsets.left + titleEdgeInsets.right + imageViewWidth, height: labelSize.height + titleEdgeInsets.top + titleEdgeInsets.bottom)
+        
+        return desiredButtonSize
     }
     
     
@@ -38,8 +38,10 @@ extension BtnDetail {
     private func setupView(){
         
 //        self.backgroundColor = .red
-        
-        self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: -20)
+        self.titleLabel?.adjustsFontSizeToFitWidth = true
+        self.titleLabel?.lineBreakMode = .byWordWrapping
+        self.titleLabel?.numberOfLines = 1
+        self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
         
     }
     

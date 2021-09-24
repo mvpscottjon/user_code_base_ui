@@ -178,12 +178,11 @@ extension MineView{
         })
         
         
-        btnFollow.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: -5)
-        
+        btnFollow.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
         btnFollow.imageView?.contentMode = .scaleAspectFit
         btnFollow.setImage(UIImage(systemName: "person.2")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        btnFollow.setTitle("Follow", for: .normal)
-        btnFollow.setTitleColor(.lightGray, for: .normal)
+//        btnFollow.setTitle("Follow", for: .normal)
+//        btnFollow.setTitleColor(.lightGray, for: .normal)
         btnFollow.tintColor = .black
         
         
@@ -198,7 +197,7 @@ extension MineView{
         })
         
         
-        btnEmail.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: -5)
+        btnEmail.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
 
         btnEmail.imageView?.contentMode = .scaleAspectFit
         btnEmail.setImage(UIImage(systemName: "envelope")?.withRenderingMode(.alwaysTemplate), for: .normal)
@@ -207,6 +206,7 @@ extension MineView{
         btnEmail.tintColor = .black
         
         
+//        btnEmail.backgroundColor = .yellow
         
         self.addSubview(btnEmail)
         btnEmail.snp.makeConstraints({
@@ -237,7 +237,8 @@ extension MineView{
         self.lbLogin.text = subVM?.login
         
         self.btnFollow.setAttributedTitle(subVM?.followAttrString, for: .normal)
-//        self.btnEmail.setTitle(subVM?.email, for: .normal)
+        self.btnFollow.sizeToFit()
+//        self.btnEmail.setTitle(subVM?.email ?? "", for: .normal)
         
     }
     
