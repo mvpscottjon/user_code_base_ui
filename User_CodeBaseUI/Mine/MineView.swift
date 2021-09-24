@@ -177,7 +177,7 @@ extension MineView{
             
         })
         
-        
+//        btnFollow.titleLabel?.numberOfLines = 1
         btnFollow.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
         btnFollow.imageView?.contentMode = .scaleAspectFit
         btnFollow.setImage(UIImage(systemName: "person.2")?.withRenderingMode(.alwaysTemplate), for: .normal)
@@ -191,7 +191,7 @@ extension MineView{
         btnFollow.snp.makeConstraints({
             $0.top.equalTo(lbLogin.snp.bottom).offset(20)
             $0.leading.equalTo(lbFullName)
-//            $0.trailing.equalToSuperview().offset(-60)
+            $0.trailing.equalToSuperview().inset(10)
             
             
         })
@@ -214,7 +214,8 @@ extension MineView{
             $0.leading.equalTo(btnFollow)
 //            $0.trailing.equalToSuperview().offset(-60)
             
-            
+            $0.trailing.equalToSuperview().inset(10)
+
         })
         
         

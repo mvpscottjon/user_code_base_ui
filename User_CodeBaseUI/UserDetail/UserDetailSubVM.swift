@@ -68,7 +68,7 @@ class UserDetailSubVM:NSObject{
         
         
         
-        let doc = "."
+        let doc = " ・ "
         
         let attrDoc = NSAttributedString(string: doc, attributes: strAttr)
         
