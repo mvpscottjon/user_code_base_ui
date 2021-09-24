@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (5.4.3)
+  - Bond (7.8.1):
+    - Differ (~> 1.4)
+    - ReactiveKit (~> 3.14)
+  - Differ (1.4.5)
+  - Kingfisher (6.3.1)
+  - ReactiveKit (3.17.4)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Bond
+  - Kingfisher
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Bond
+    - Differ
+    - Kingfisher
+    - ReactiveKit
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Bond: 87075c7f20f37ea3e73dc7057fce839787bf46eb
+  Differ: 3b6bd78e2b20cc795d9a86f7641d087524e4273e
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  ReactiveKit: f9f9e079efa39312c597bf1508ef4810d111ce76
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 544f9a32ae49b79328042558433a7af04f9125d9
+
+COCOAPODS: 1.11.2
