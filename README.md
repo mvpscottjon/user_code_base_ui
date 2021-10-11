@@ -1,11 +1,9 @@
 # Intro
 
-Use Reddit API and RxSwift to build an App with functions of searching posts and downloading thumbnails.
 
 使用Reddit API & RxSwift打造一個可以搜尋post和下載縮圖的App。
 
 # Installation
-please open terminal and cd to project path
 
 打開termanal並移動到專案位置
 
@@ -16,11 +14,27 @@ please open terminal and cd to project path
 ``` $ pod install  ```
 
 
+安裝pod後，請打開 Reddit-RxSwiftDemo.xcworkspace
+然後可以開始build project，
+
+
 # Function
 
+1.搜尋post
+
+2.若貼文有縮圖，可長按圖片或按下載圖示進行背景下載，下載成功後會顯示儲存成功
+
+3.若貼文有link，則顯示link按鈕，點擊用webView開啟
+
+
 # Memo
+1. 開啟app預設先搜尋TAIWAN，因其貼文thumbnail相對較多
 
+2. 貼文者圖片不是每個人都有，若無則以預設灰色代表圖片區塊
 
+3. 背景下載圖片，預設為存到realm local storage，亦可選擇存到userDefauls(function有做，但要從程式修改storageType)
+
+4. 貼文thumbnail若手動儲存後，下次會優先讀取local data(為了展示背景下載的function，不然應該採用alamofire預設的cache或者自動存到realm是較好的方案)
 
 
 
