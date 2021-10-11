@@ -2,8 +2,9 @@
 
 Use Reddit API to build an App with functions of searching posts and downloading thumbnails.
 
-# Install
-
+# Installation
+please open ternimal and cd to project path, like ''
+''' $ cd .../Reddit-RxSwift-Demo-master/Reddit-RxSwiftDemo  '''
 # Function
 
 # Memo
